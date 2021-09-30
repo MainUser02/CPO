@@ -1,0 +1,17 @@
+/* Error: Expected expression.
+ *     ,
+ * 200 |     @include font($font-size: , $line-height: , $font-family: , $font-weight: , $font-style: )
+ *     |                               ^
+ *     '
+ *   styles\style.sass 200:31  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Expected expression.\a     \2577 \a 200 \2502      @include font($font-size: , $line-height: , $font-family: , $font-weight: , $font-style: )\d\a     \2502                                ^\a     \2575 \a   styles\\style.sass 200:31  root stylesheet";
+}

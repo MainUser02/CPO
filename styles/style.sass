@@ -1,0 +1,201 @@
+// // ===========================FONT START===================================
+@font-face
+    font-family: 'OpenSans-Light'
+    src: url('../fonts/OpenSans-Light.eot')
+    src: local('☺'), url('../fonts/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans-Light.ttf') format('truetype'), url('../fonts/OpenSans-Light.svg') format('svg')
+    font-weight: lighter
+    font-style: normal
+
+@font-face
+    font-family: 'OpenSans-Regular'
+    src: url('../fonts/OpenSans-Regular.eot')
+    src: local('☺'), url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans-Regular.svg') format('svg')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'OpenSans-Medium'
+    src: url('../fonts/OpenSans-Medium.eot')
+    src: local('☺'), url('../fonts/OpenSans-Medium.woff') format('woff'), url('../fonts/OpenSans-Medium.ttf') format('truetype'), url('../fonts/OpenSans-Medium.svg') format('svg')
+    font-weight: medium
+    font-style: normal
+
+@font-face
+    font-family: 'OpenSans-Bold'
+    src: url('../fonts/OpenSans-Bold.eot')
+    src: local('☺'), url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf') format('truetype'), url('../fonts/OpenSans-Bold.svg') format('svg')
+    font-weight: bold
+    font-style: normal
+
+@font-face
+    font-family: 'OpenSans-ExtraBold'
+    src: url('fonts/OpenSans-ExtraBold.eot')
+    src: local('☺'), url('../fonts/OpenSans-ExtraBold.woff') format('woff'), url('../fonts/OpenSans-ExtraBold.ttf') format('truetype'), url('../fonts/OpenSans-ExtraBold.svg') format('svg')
+    font-weight: bolder
+    font-style: normal
+// // ==================FONT END=================================================
+
+// // Mixins ================
+
+@mixin font($font-size, $line-height, $font-family, $font-weight, $font-style)
+    font-size: $font-size
+    line-height: $line-height
+    font-family: $font-family
+    font-weight: $font-weight
+    font-style: $font-style
+
+@mixin flex-center($width, $min-height, $height, $background, $display, $justify-content, $align-items)
+    width: $width
+    min-height: $min-height
+    height: $height
+    background: $background
+    display: $display
+    justify-content: $justify-content
+    align-items: $align-items
+
+@mixin box($width, $height, $min-height)
+    width: $width
+    height: $height
+    min-height: $min-height
+
+@mixin btn($width, $height, $display, $justify-content, $align-items)
+    border: none
+    background: #EB0E0E
+    border-radius: 0
+    width: $width
+    height: $height
+    display: $display
+    justify-content: $justify-content
+    align-items: $align-items
+
+@mixin arrow($width, $height)
+    border: none
+    background: none
+    width: $width
+    height: $height
+
+@mixin background($background-image, $background-repeat, $background-position, $background-size)
+    background-image: $background-image
+    background-repeat: $background-repeat
+    background-position: $background-position
+    background-size: $background-size
+
+// // End mixin =============================
+body
+    padding: 0
+    margin: 0 auto
+
+*
+    margin: 0
+    padding: 0
+
+// =================START SLIDER============================
+#slides
+    position: relative
+    height: 100vh
+    padding: 0px
+    margin: 0px
+    list-style-type: none
+
+.slide
+    position: absolute
+    left: 0px
+    top: 0px
+    width: 100%
+    height: 100%
+    opacity: 0
+    z-index: 1
+    -webkit-transition: opacity 1s
+    -moz-transition: opacity 1s
+    -o-transition: opacity 1s
+    transition: opacity 1s
+
+.showing
+    opacity: 1
+    z-index: 2
+
+.controls
+    display: block
+
+// non-essential styles:
+// just for appearance change whatever you want
+
+.slide
+    box-sizing: border-box
+    background: #333
+    color: #fff
+    background-size: cover
+
+/* http://unrestrictedstock.com/wp-content/uploads/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg */
+// .slide:nth-of-type(1)
+
+/* http://www.dawghousedesignstudio.com/wp-content/uploads/2010/01/25/free-stock-photos-1.jpg */
+// .slide:nth-of-type(2)
+
+/* http://www.stockfreeimages.com/static/homepage/waterfall-free-stock-photo-244915.jpg */
+// .slide:nth-of-type(3)
+
+.controls
+    display: block !important
+    background: #333
+    color: #fff
+    border: none
+    padding: 20px 0px
+    font-size: 20px
+    cursor: pointer
+    border: 2px solid #fff
+    margin: 68px 0px 0px 10px
+    width: 70px
+
+.controls:hover,
+.controls:focus
+    background: #eee
+    color: #333
+
+.container
+    position: relative
+
+.buttons
+    position: absolute
+    left: 0px
+    top: 30%
+    z-index: 10
+    font-size: 0px
+// =====================END SLIDER=============================
+
+// START =====================================
+.mainPage
+    @include flex-center(100%, auto, auto, none, flex, center, center)
+
+.innerBlock
+    @include flex-center(100%, auto, 100vh, none, flex, none, none)
+    @include background(url(../picture/backImage.jpg), no-repeat, center, cover)
+
+header
+    @include flex-center(100%, auto, auto, none, flex, none, none)
+    position: absolute
+    z-index: 10
+
+#nav
+    @include flex-center(100%, auto, 90px, none, flex, center, center)
+    list-style: none
+    color: #fff
+
+.logoBlock
+    @include box(72px, 41px, auto)
+    @include font(30px, 40.85px, 'OpenSans-Bold', bold, normal)
+    color: #EB0E0E
+
+.logoText
+    @include box(124px, 48px, auto)
+    @include font(12px, 16.34px, 'OpenSans-Medium', medium, normal)
+    color: #2D3D4C
+
+.socialBlock
+    @include box(74px, 32px, auto)
+    @include font(12px, 16.34px, 'OpenSans-Medium', medium, normal)
+
+.adressBlock
+    @include box(65px, 32px, auto)
+    @include font($font-size: , $line-height: , $font-family: , $font-weight: , $font-style: )
+    
