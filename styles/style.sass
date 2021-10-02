@@ -67,6 +67,7 @@
     display: $display
     justify-content: $justify-content
     align-items: $align-items
+    cursor: pointer
 
 @mixin arrow($width, $height)
     border: none
@@ -137,13 +138,13 @@ body
 
 .controls
     display: block !important
-    background: #333
-    color: #fff
+    background: #ff0000
+    color: #ffffff
     border: none
     padding: 20px 0px
     font-size: 20px
     cursor: pointer
-    border: 2px solid #fff
+    border-radius: 5px
     margin: 68px 0px 0px 10px
     width: 70px
 
@@ -163,14 +164,10 @@ body
     font-size: 0px
 // =====================END SLIDER=============================
 
+// ======================BURGER=============================
+
+// =========================END BURGER=========================
 // START =====================================
-.mainPage
-    @include flex-center(100%, auto, auto, none, flex, center, center)
-
-.innerBlock
-    @include flex-center(100%, auto, 100vh, none, flex, none, none)
-    @include background(url(../picture/backImage.jpg), no-repeat, center, cover)
-
 header
     @include flex-center(100%, auto, auto, none, flex, none, none)
     position: absolute
@@ -183,18 +180,140 @@ header
 
 .logoBlock
     @include box(72px, 41px, auto)
-    @include font(30px, 40.85px, 'OpenSans-Bold', bold, normal)
+    @include font(30px, 40.85px, 'OpenSans-ExtraBold', bolder, normal)
     color: #EB0E0E
+    margin-right: 11px
 
 .logoText
     @include box(124px, 48px, auto)
     @include font(12px, 16.34px, 'OpenSans-Medium', medium, normal)
     color: #2D3D4C
+    margin-right: 239px
 
 .socialBlock
     @include box(74px, 32px, auto)
     @include font(12px, 16.34px, 'OpenSans-Medium', medium, normal)
+    margin-right: 20px
+
+.socialIcon
+    @include box(137px, 35px, auto)
+    @include flex-center(137px, auto, 35px, none, flex, space-between, center)
+    flex-direction: row
+    margin-right: 90px
+    img
+        width: 35px
+        height: 35px
+        border-radius: 5px
 
 .adressBlock
     @include box(65px, 32px, auto)
     @include font(12px, 16.34px, 'OpenSans-Medium', medium, normal)
+    margin-right: 20px
+
+.addresNumber
+    @include box(124px, 32px, auto)
+    @include font(12px, 16.34px, 'OpenSans-Light', lighter, normal)
+    margin-right: 110px
+
+.contactBlock
+    @include box(165px, 25px, auto)
+    @include font(18px, 24.51px, 'OpenSans-Bold', bold, normal)
+
+.mainPage
+    @include flex-center(100%, auto, auto, none, flex, center, center)
+
+.innerBlock
+    @include flex-center(100%, auto, 100vh, none, flex, center, center)
+    flex-direction: column
+    @include background(url(../picture/backImage.jpg), no-repeat, center, cover)
+
+.contentBlock
+    @include flex-center(100%, auto, 64%, none, flex, space-between, center)
+    margin-top: 90px
+
+.asideBlock
+    @include flex-center(44%, auto, 100%, none, flex, space-between, flex-start)
+    flex-direction: column
+    margin-left: 100px
+    p
+        @include font(30px, 30px, 'OpenSans-Regular', normal, normal)
+
+h1
+    @include font(60px, 81.71px, 'OpenSans-ExtraBold', bolder, normal)
+
+.submitBtn
+    @include btn(303px, 67px, flex, center, center)
+    border-radius: 5px
+    @include font(25px, 25px, 'OpenSans-Bold', bold, normal)
+    color: #fff
+
+.submitBtn:hover,
+.submitBtn:focus
+    background: #eee
+    color: #333
+
+.allCoursesBtnBlock
+    transform: rotate(-90deg)
+
+.allCoursesBtn
+    @include btn(303px, 67px, flex, center, center)
+    border-radius: 5px
+    @include font(25px, 25px, 'OpenSans-Bold', bold, normal)
+    color: #fff
+
+.allCoursesBtn:hover,
+.allCoursesBtn:focus
+    background: #eee
+    color: #333
+
+.moreBtnContainer
+    @include flex-center(100%, auto, 22%, none, flex, space-around, center)
+
+.tinyBtnMore
+    @include flex-center(7%, auto, 100%, none, flex, space-between, center)
+    flex-direction: row
+    a
+        @include font(12px, 18px, 'OpenSans-Regular', normal, normal)
+        text-decoration: none
+        color: #fff
+
+.moreBtn
+    @include btn(40px, 50px, flex, center, center)
+    background: none
+    background-image: url(../icon/scroll.svg)
+    background-repeat: none
+    background-position: center
+
+.tinyGalleryContainer
+    @include flex-center(47%, auto, 100%, none, flex, space-between, center)
+    img
+        @include box(auto, 100%, auto)
+
+// =====================START SECOND SLIDE=============================
+.aboutCenterWrapper
+    @include flex-center(100%, auto, 100%, #000, flex, center, center)
+
+.aboutCenterInner
+    @include flex-center(100%, auto, 100%, none, flex, center, center)
+
+.aboutCenterContent
+    @include flex-center(100%, auto, 70%, none, flex, space-around, center)
+    flex-direction: column
+
+.aboutCenterBox
+    @include flex-center(100%, auto, 100%, none, flex, space-evenly, center)
+    img
+        @include box(auto, auto, auto)
+
+.textContentContainer
+    @include flex-center(40%, auto, 70%, none, flex, space-between, center)
+    flex-direction: column
+    p
+        @include font(14px, 19.07px, 'OpenSans-Regular', normal, normal)
+        span
+            color: #ff0000
+            @include font(14px, 19.07px, 'OpenSans-Bold', bold, normal)
+
+h2
+    @include font(30px, 40.85px, 'OpenSans-ExtraBold', bolder, normal)
+    color: #ff0000

@@ -87,13 +87,13 @@ body {
 /* http://www.stockfreeimages.com/static/homepage/waterfall-free-stock-photo-244915.jpg */
 .controls {
   display: block !important;
-  background: #333;
-  color: #fff;
+  background: #ff0000;
+  color: #ffffff;
   border: none;
   padding: 20px 0px;
   font-size: 20px;
   cursor: pointer;
-  border: 2px solid #fff;
+  border-radius: 5px;
   margin: 68px 0px 0px 10px;
   width: 70px;
 }
@@ -114,30 +114,6 @@ body {
   top: 30%;
   z-index: 10;
   font-size: 0px;
-}
-
-.mainPage {
-  width: 100%;
-  min-height: auto;
-  height: auto;
-  background: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.innerBlock {
-  width: 100%;
-  min-height: auto;
-  height: 100vh;
-  background: none;
-  display: flex;
-  justify-content: none;
-  align-items: none;
-  background-image: url(../picture/backImage.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 header {
@@ -170,10 +146,11 @@ header {
   min-height: auto;
   font-size: 30px;
   line-height: 40.85px;
-  font-family: "OpenSans-Bold";
-  font-weight: bold;
+  font-family: "OpenSans-ExtraBold";
+  font-weight: bolder;
   font-style: normal;
   color: #EB0E0E;
+  margin-right: 11px;
 }
 
 .logoText {
@@ -186,6 +163,7 @@ header {
   font-weight: medium;
   font-style: normal;
   color: #2D3D4C;
+  margin-right: 239px;
 }
 
 .socialBlock {
@@ -197,6 +175,27 @@ header {
   font-family: "OpenSans-Medium";
   font-weight: medium;
   font-style: normal;
+  margin-right: 20px;
+}
+
+.socialIcon {
+  width: 137px;
+  height: 35px;
+  min-height: auto;
+  width: 137px;
+  min-height: auto;
+  height: 35px;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 90px;
+}
+.socialIcon img {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
 }
 
 .adressBlock {
@@ -208,6 +207,289 @@ header {
   font-family: "OpenSans-Medium";
   font-weight: medium;
   font-style: normal;
+  margin-right: 20px;
+}
+
+.addresNumber {
+  width: 124px;
+  height: 32px;
+  min-height: auto;
+  font-size: 12px;
+  line-height: 16.34px;
+  font-family: "OpenSans-Light";
+  font-weight: lighter;
+  font-style: normal;
+  margin-right: 110px;
+}
+
+.contactBlock {
+  width: 165px;
+  height: 25px;
+  min-height: auto;
+  font-size: 18px;
+  line-height: 24.51px;
+  font-family: "OpenSans-Bold";
+  font-weight: bold;
+  font-style: normal;
+}
+
+.mainPage {
+  width: 100%;
+  min-height: auto;
+  height: auto;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerBlock {
+  width: 100%;
+  min-height: auto;
+  height: 100vh;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../picture/backImage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.contentBlock {
+  width: 100%;
+  min-height: auto;
+  height: 64%;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.asideBlock {
+  width: 44%;
+  min-height: auto;
+  height: 100%;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 100px;
+}
+.asideBlock p {
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "OpenSans-Regular";
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 81.71px;
+  font-family: "OpenSans-ExtraBold";
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.submitBtn {
+  border: none;
+  background: #EB0E0E;
+  border-radius: 0;
+  width: 303px;
+  height: 67px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 25px;
+  line-height: 25px;
+  font-family: "OpenSans-Bold";
+  font-weight: bold;
+  font-style: normal;
+  color: #fff;
+}
+
+.submitBtn:hover,
+.submitBtn:focus {
+  background: #eee;
+  color: #333;
+}
+
+.allCoursesBtnBlock {
+  transform: rotate(-90deg);
+}
+
+.allCoursesBtn {
+  border: none;
+  background: #EB0E0E;
+  border-radius: 0;
+  width: 303px;
+  height: 67px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 25px;
+  line-height: 25px;
+  font-family: "OpenSans-Bold";
+  font-weight: bold;
+  font-style: normal;
+  color: #fff;
+}
+
+.allCoursesBtn:hover,
+.allCoursesBtn:focus {
+  background: #eee;
+  color: #333;
+}
+
+.moreBtnContainer {
+  width: 100%;
+  min-height: auto;
+  height: 22%;
+  background: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tinyBtnMore {
+  width: 7%;
+  min-height: auto;
+  height: 100%;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.tinyBtnMore a {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "OpenSans-Regular";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #fff;
+}
+
+.moreBtn {
+  border: none;
+  background: #EB0E0E;
+  border-radius: 0;
+  width: 40px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  background-image: url(../icon/scroll.svg);
+  background-repeat: none;
+  background-position: center;
+}
+
+.tinyGalleryContainer {
+  width: 47%;
+  min-height: auto;
+  height: 100%;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tinyGalleryContainer img {
+  width: auto;
+  height: 100%;
+  min-height: auto;
+}
+
+.aboutCenterWrapper {
+  width: 100%;
+  min-height: auto;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutCenterInner {
+  width: 100%;
+  min-height: auto;
+  height: 100%;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutCenterContent {
+  width: 100%;
+  min-height: auto;
+  height: 70%;
+  background: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aboutCenterBox {
+  width: 100%;
+  min-height: auto;
+  height: 100%;
+  background: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.aboutCenterBox img {
+  width: auto;
+  height: auto;
+  min-height: auto;
+}
+
+.textContentContainer {
+  width: 40%;
+  min-height: auto;
+  height: 70%;
+  background: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.textContentContainer p {
+  font-size: 14px;
+  line-height: 19.07px;
+  font-family: "OpenSans-Regular";
+  font-weight: normal;
+  font-style: normal;
+}
+.textContentContainer p span {
+  color: #ff0000;
+  font-size: 14px;
+  line-height: 19.07px;
+  font-family: "OpenSans-Bold";
+  font-weight: bold;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 40.85px;
+  font-family: "OpenSans-ExtraBold";
+  font-weight: bolder;
+  font-style: normal;
+  color: #ff0000;
 }
 
 /*# sourceMappingURL=style.css.map */

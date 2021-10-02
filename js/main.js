@@ -51,3 +51,4 @@ next.onclick = function () {
 previous.onclick = function () {
     previousSlide();
 };
+
